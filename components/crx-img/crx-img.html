@@ -1,0 +1,53 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+Image element requesting external images using XMLHttpRequest.
+
+##### Example
+
+    <crx-img src="http://www.polymer-project.org/images/logos/lockup.svg"></crx-img>
+
+@element crx-img
+@blurb Image element requesting external images using XMLHttpRequest
+@status alpha
+@homepage http://beaufortfrancois.github.io/crx-img
+-->
+<polymer-element name="crx-img" attributes="src">
+
+  <template>
+  
+    <img id="img"></img>
+
+  </template>
+
+  <script>
+
+    Polymer('crx-img', {
+      /**
+       * The `src` attribute sets the URL of the image
+       * 
+       * @attribute src
+       * @type string
+       * @default null
+       */
+      src: null,
+      
+      srcChanged: function() {
+        var xhr = new XMLHttpRequest();
+  
+        var that = this;
+        xhr.onload = function() {
+          if(xhr.readyState === 4 && xhr.status === 200) {
+            that.$.img.src = URL.createObjectURL(xhr.response);
+          }
+        };
+        xhr.open('GET', that.src, true);
+        xhr.responseType = 'blob';
+        xhr.send();
+      }
+
+    });
+
+  </script>
+
+</polymer-element>

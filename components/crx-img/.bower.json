@@ -1,0 +1,27 @@
+{
+  "name": "crx-img",
+  "authors": [
+    "Francois Beaufort <beaufort.francois@gmail.com>"
+  ],
+  "description": "Image element requesting external images using XMLHttpRequest.",
+  "keywords": "chrome-apps, polymer, web-components",
+  "main": "crx-img.html",
+  "license": "MIT",
+  "homepage": "https://github.com/beaufortfrancois/crx-img/",
+  "ignore": [
+    "**/.*"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.3.4"
+  },
+  "_release": "d16d7c1794",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "d16d7c1794d4ab862f2761fed50bb6820cff9a21"
+  },
+  "_source": "git://github.com/beaufortfrancois/crx-img.git",
+  "_target": "master",
+  "_originalSource": "beaufortfrancois/crx-img",
+  "_direct": true
+}

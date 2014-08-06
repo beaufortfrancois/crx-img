@@ -1,0 +1,7 @@
+{
+  "name": "crx-img#gh-pages",
+  "private": true,
+  "dependencies": {
+    "crx-img": "beaufortfrancois/crx-img#master"
+  }
+}
